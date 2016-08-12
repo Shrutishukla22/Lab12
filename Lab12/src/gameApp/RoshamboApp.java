@@ -18,20 +18,23 @@ public class RoshamboApp {
 		
 		while (choice.equalsIgnoreCase("yes")) {
 			
-            System.out.println("would you like to play against Rock_Player or Random_Player(RP1/RP2)?:");
+            System.out.println("would you like to play against Rock_Player or Random_Player(RoP/RaP)?:");
                String userInput2 =scan1.nextLine();
-   
+           if(!(userInput2.equalsIgnoreCase("RoP"))||(userInput2.equalsIgnoreCase("RaP"))){
+        	   System.out.println("please enter RoP/RaP");
+        	   continue;
+           }
             System.out.println("Rock,Paper or Scissors?:");
                String userInput3 =scan1.nextLine();
             if(!(userInput3.equalsIgnoreCase("rock")||userInput3.equalsIgnoreCase("Paper")||userInput3.equalsIgnoreCase("Scissors"))){
             	System.out.println("Please input only - Rock,Paper or Scissors");
             	continue;
             }
-          Player player1= new Rock_Player("Rock_Player");
-          Player player2= new Random_player("Random_player");
+          Player player1= new Rock_Player("RoP");
+          Player player2= new Random_player("RaP");
           Player player3= new Human_Player(userInput1,userInput3 );
           
-              if(userInput2.equalsIgnoreCase("RP1")){
+              if(userInput2.equalsIgnoreCase("RoP")){
             	System.out.println(player1.getName()+":"+" "+ player1.generateRoshambo());
           		System.out.println(player3.getName()+":"+" "+ player3.generateRoshambo());
             	if(player3.generateRoshambo().equalsIgnoreCase("Rock")) {
@@ -47,7 +50,7 @@ public class RoshamboApp {
             	}
            }
               
-              if(userInput2.equalsIgnoreCase("RP2")){
+              if(userInput2.equalsIgnoreCase("RaP")){
             	 String player2RoshamboValue=player2.generateRoshambo() ;
             	System.out.println(player2.getName()+":"+" "+ player2RoshamboValue);
           		System.out.println(player3.getName()+":"+" "+ player3.generateRoshambo());
