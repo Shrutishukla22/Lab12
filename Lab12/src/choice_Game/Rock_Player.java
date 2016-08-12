@@ -5,14 +5,14 @@ public class Rock_Player extends Player {
 	@Override
 	public String generateRoshambo() {
 		
-		return getRoshamboValue();
+		return "Rock";
 	}
 
-	public Rock_Player(String name, String roshamboValue) {
-		super(name, roshamboValue);
+	
+	
+	public Rock_Player(String name) {
+		super(name);
 		
 	}
-	
-	
 
 }

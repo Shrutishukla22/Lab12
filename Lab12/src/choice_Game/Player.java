@@ -22,5 +22,10 @@ public Player(String name, String roshamboValue) {
 	setRoshamboValue(roshamboValue);
 	
 }
+public Player(String name) {
+	setName(name);
+	
+	
+}
 public abstract String generateRoshambo();
 }
